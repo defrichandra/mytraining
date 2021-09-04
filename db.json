@@ -1,0 +1,32 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "username": "U0001",
+            "password": "123456"
+        }
+    ],
+    "siswa": [
+        {
+            "id": 1,
+            "kode": "U-01",
+            "nama": "MM",
+            "alamat": "Jakarta",
+            "usia": 15
+        },
+        {
+            "id": 2,
+            "kode": "U-02",
+            "nama": "NN",
+            "alamat": "Bandung",
+            "usia": 16
+        },
+        {
+            "id": 3,
+            "kode": "U-03",
+            "nama": "LL",
+            "alamat": "Yogyakarta",
+            "usia": 16
+        }
+    ]
+}

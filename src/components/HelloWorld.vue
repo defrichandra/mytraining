@@ -1,6 +1,23 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <!-- menampilkan data -->
+    <p>Nama : {{name}}</p>
+    <p>Link: {{website}}</p>
+    <!-- conditional rendering -->
+    <h1 v-if="tinggi >= 170">Tinggi di atas 170cm</h1>
+    <h1 v-else-if="tinggi >= 140">Tinggi di antara 140 - 170 cm</h1>
+    <h1 v-else>Tinggi di bawah 140cm</h1>
+    <!-- list rendering -->
+    <ul>
+      <li v-for="(car, index) in cars" :key="index"> <!-- key dan titik dua harus nempel -->
+        {{car.name}}
+      </li>
+    </ul>
+    <!-- event handling -->
+    Masukkan Nama
+    <input type="text" v-model="nama">
+    <button type="buton" @click="showMessage">Klik</button> -->
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -35,6 +52,24 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      //menampilkan data
+      name: "test",
+      website: "https://test.co.id",
+      // conditional rendering
+      tinggi: 155,
+      // list rendering
+      cars: [{name:"Toyota"}, {name:"Mitsubishi"}, {name:"Daihatsu"}],
+      // event handling
+      nama: "",
+    };
+  },
+  methods: {
+    showMessage: function () {
+      alert(`Selamat datang, ${this.nama}`); //tanda petiknya beda
+    } 
   }
 }
 </script>
